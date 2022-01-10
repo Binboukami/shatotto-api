@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  database:
+    image: mysql
+    container_name: database
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'paradox'
+      MYSQL_DATABASE: 'shattoto-api'
+    deploy:
+      mode: global
+      resources:
+        limits:
+          memory: 10GiB
+        reservations:
+          cpus: '0.50'
+          memory: 512M
+    ports:
+      - '3306:3306'
