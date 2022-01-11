@@ -4,7 +4,11 @@ import { Action } from 'App/Models'
 export default class ActionsController {
   public async index({ }: HttpContextContract) {
     const data = await Action.query().preload('type')
-    return data;
+    const serializedData = await data.map((data) => data.serialize({
+      fields: { omit: ['type_id'] }
+    }))
+
+    return serializedData;
   }
 
   public async store({ request }: HttpContextContract) {
