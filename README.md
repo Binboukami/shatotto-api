@@ -17,6 +17,10 @@ $ cd ./api
 # install dependencies
 $ npm install
 
+# run migrations and seeding
+$ node ace migration:run
+$ node ace db:seed
+
 # serve with hot reload at localhost:3333
 $ npm run dev
 
