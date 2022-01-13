@@ -26,16 +26,33 @@ export default class Action extends BaseModel {
   public element: BelongsTo<typeof Element>
 
   @column()
-  public recastTime: number
+  public cast: number
+
+  @column()
+  public recast: number
 
   @column()
   public potency: number
 
   @column()
-  public potencyOverTime: number
+  public mpCost: number
 
   @column()
-  public mpCost: number
+  public aoe: boolean
+
+  @column()
+  public dot: boolean
+
+  @column()
+  public dotPotency: number
+
+  @column()
+  public dotDuration: number
+
+  @column()
+  public cooldown: number
+
+
 
   @column.dateTime({ autoCreate: true, serializeAs: null })
   public createdAt: DateTime
