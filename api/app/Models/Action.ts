@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
-import { Type, Element, Aspect } from '.'
+import { Type, Target, Element, Aspect } from '.'
 
 export default class Action extends BaseModel {
   @column({ isPrimary: true })
