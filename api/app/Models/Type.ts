@@ -5,9 +5,9 @@ export default class Type extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 
+  @column()
+  public key: string
+
   @hasMany(() => Action)
   public actions: HasMany<typeof Action>
-
-  @column()
-  public name: string
 }

@@ -4,10 +4,10 @@ export default class CreateTypeSeeder extends BaseSeeder {
   public async run() {
     await Type.createMany([
       {
-        'name': 'ability'
+        'key': 'ability'
       },
       {
-        'name': 'spell'
+        'key': 'spell'
       }
     ])
   }
