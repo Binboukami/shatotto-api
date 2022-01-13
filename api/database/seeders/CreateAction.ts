@@ -5,6 +5,7 @@ export default class CreateActionSeeder extends BaseSeeder {
   public async run() {
     await Action.createMany([
       {
+        'key': 'B1',
         'name': 'Blizzard I',
         'level': '1',
         'typeId': 2,

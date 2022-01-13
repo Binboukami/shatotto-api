@@ -8,6 +8,9 @@ export default class Action extends BaseModel {
   public id: number
 
   @column()
+  public key: string
+
+  @column()
   public name: string
 
   @column()
