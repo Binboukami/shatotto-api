@@ -1,10 +1,14 @@
 import { DateTime } from 'luxon'
 import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
 import { Type } from '.'
+import Element from './Element'
 
 export default class Action extends BaseModel {
   @column({ isPrimary: true })
   public id: number
+
+  @column()
+  public key: string
 
   @column()
   public name: string
@@ -19,19 +23,39 @@ export default class Action extends BaseModel {
   public type: BelongsTo<typeof Type>
 
   @column()
-  public castTime: number
+  public elementId: number
+
+  @belongsTo(() => Element)
+  public element: BelongsTo<typeof Element>
 
   @column()
-  public recastTime: number
+  public cast: number
+
+  @column()
+  public recast: number
 
   @column()
   public potency: number
 
   @column()
-  public potencyOverTime: number
+  public mpCost: number
 
   @column()
-  public mpCost: number
+  public aoe: boolean
+
+  @column()
+  public dot: boolean
+
+  @column()
+  public dotPotency: number
+
+  @column()
+  public dotDuration: number
+
+  @column()
+  public cooldown: number
+
+
 
   @column.dateTime({ autoCreate: true, serializeAs: null })
   public createdAt: DateTime
