@@ -12,6 +12,7 @@ export default class Actions extends BaseSchema {
       table.string('level')
       table.integer('type_id').unsigned().notNullable().references('id').inTable('types')
       table.integer('element_id').unsigned().notNullable().references('id').inTable('elements')
+      table.integer('target_id').unsigned().notNullable().references('id').inTable('targets')
       table.integer('aspect_id').unsigned().notNullable().references('id').inTable('aspects')
 
       table.float('cast', 3, 2)

@@ -10,6 +10,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'level': '1',
         'typeId': 2,
         'elementId': 1,
+        'targetId': 1,
         'aspectId': 4,
         'cast': 2.5,
         'recast': 2.5,
