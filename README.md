@@ -1,6 +1,6 @@
 # shatotto API
 
-An open source **BLM Resources API** for the _critically acclaimed MMORPG Final Fantasy XIV, which DOES NOT have a free trial that DOES NOT include the entirety of "A Realm Reborn" AND the award-winning "Heavensward" expansion up to level 60 with no restrictions on playtime._
+A **BLM Resources API** for the _critically acclaimed MMORPG Final Fantasy XIV, which DOES NOT have a free trial that DOES NOT include the entirety of "A Realm Reborn" AND the award-winning "Heavensward" expansion up to level 60 with no restrictions on playtime._
 
 ## Build Setup
 
