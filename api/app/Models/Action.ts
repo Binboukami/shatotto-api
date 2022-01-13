@@ -1,7 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
-import { Type } from '.'
-import Element from './Element'
+import { Type, Element, Aspect } from '.'
 
 export default class Action extends BaseModel {
   @column({ isPrimary: true })
@@ -27,6 +26,12 @@ export default class Action extends BaseModel {
 
   @belongsTo(() => Element)
   public element: BelongsTo<typeof Element>
+
+  @column()
+  public aspectId: number
+
+  @belongsTo(() => Aspect)
+  public aspect: BelongsTo<typeof Aspect>
 
   @column()
   public cast: number
