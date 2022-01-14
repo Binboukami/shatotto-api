@@ -20,6 +20,7 @@ export default class Actions extends BaseSchema {
       table.integer('potency')
       table.integer('mp_cost')
       table.boolean('aoe')
+      table.float('aoe_scale', 3, 2)
       table.boolean('dot')
       table.integer('dot_potency')
       table.integer('dot_duration')

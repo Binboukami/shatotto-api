@@ -55,6 +55,9 @@ export default class Action extends BaseModel {
   public aoe: boolean
 
   @column()
+  public aoeScale: number
+
+  @column()
   public dot: boolean
 
   @column()

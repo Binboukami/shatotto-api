@@ -17,6 +17,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'potency': 180,
         'mpCost': 400,
         'aoe': false,
+        'aoeScale': 0,
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
