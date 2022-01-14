@@ -10,16 +10,4 @@ export default class ActionsController {
 
     return serializedData;
   }
-
-  public async store({ request }: HttpContextContract) {
-    const data = await request.only(['name', 'typeId']);
-    const action = await Action.create(data)
-
-    await action.load('type')
-    return action;
-  }
-
-  public async update({ }: HttpContextContract) { }
-
-  public async destroy({ }: HttpContextContract) { }
 }
