@@ -5,6 +5,16 @@ export default class CreateAspectSeeder extends BaseSeeder {
   public async run() {
     await Aspect.createMany([
       {
+        'key': 'N',
+        'name': 'Neutral',
+        'value': 0,
+        'buffDuration': 0,
+        'buffScale': 0,
+        'oppositeScale': 0,
+        'mpGain': 0,
+        'oppositeMpCost': 0
+      },
+      {
         'key': 'AF1',
         'name': 'Astral Fire I',
         'value': 1,
