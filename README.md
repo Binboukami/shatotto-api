@@ -28,9 +28,9 @@ $ npm run dev
 $ npm run build
 $ npm run start
 ```
-
-## Database
-
+## Documentation
+### Database
+### API
 ## Resources
 
 **(Discord) Fürst#4041's [BLM 6.X Rotation Planner](https://docs.google.com/spreadsheets/d/1qbOY5WSfgzoCyHyzTJMJCl_7q6yfm3TErjs-8GyrAZ0/edit)**
@@ -39,7 +39,12 @@ $ npm run start
 
 ## Todo
 
-- List all BLM actions  - abilities and spells -, skills (like 'Sprint') and Traits as of 6.X
-- Add 'Constants' entity for math stuff
-- Implement a Rotation planner with Proc(?), CD and MP validations
-- Implement MP tick (based on server tick/ping calculations)
+### Database
+- [ ] List all BLM actions  - abilities and spells -, skills (like 'Sprint') and Traits as of Endwalker 6.X
+- [ ] List potions and relevant stats buff items
+
+### API
+- [ ] GET: routes - expose the database to developers
+- [ ] Add 'Constants' entity for math stuff
+- [ ] Implement a Rotation planner with Proc(?), CD and MP validations
+- [ ] Implement MP tick validation (based on server tick/ping calculations)
