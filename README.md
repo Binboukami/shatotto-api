@@ -31,8 +31,6 @@ $ npm run start
 
 ## Database
 
-Insert here detailed documention related to the database
-
 ## Resources
 
 **(Discord) Fürst#4041's [BLM 6.X Rotation Planner](https://docs.google.com/spreadsheets/d/1qbOY5WSfgzoCyHyzTJMJCl_7q6yfm3TErjs-8GyrAZ0/edit)**
