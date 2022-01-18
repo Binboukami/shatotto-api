@@ -365,6 +365,44 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dotDuration': 0,
         'cooldown': 0
       },
+      {
+        'key': 'HF',
+        'name': 'High Fire',
+        'level': '82',
+        'typeId': 2,
+        'elementId': 2,
+        'targetId': 2,
+        'aspectId': 4,
+        'cast': 3,
+        'recast': 2.5,
+        'potency': 140,
+        'mpCost': 1500,
+        'aoe': true,
+        'aoeScale': 0,
+        'dot': false,
+        'dotPotency': 0,
+        'dotDuration': 0,
+        'cooldown': 0
+      },
+      {
+        'key': 'HB',
+        'name': 'High Blizzard',
+        'level': '82',
+        'typeId': 2,
+        'elementId': 1,
+        'targetId': 2,
+        'aspectId': 7,
+        'cast': 3,
+        'recast': 2.5,
+        'potency': 120,
+        'mpCost': 800,
+        'aoe': true,
+        'aoeScale': 0,
+        'dot': false,
+        'dotPotency': 0,
+        'dotDuration': 0,
+        'cooldown': 0
+      },
     ])
   }
 }
