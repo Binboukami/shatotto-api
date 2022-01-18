@@ -11,6 +11,9 @@ export default class CreateElementSeeder extends BaseSeeder {
         "key": "Fire"
       },
       {
+        "key": "Lightning"
+      },
+      {
         "key": "Magic"
       }
     ])
