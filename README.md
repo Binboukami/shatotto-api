@@ -30,7 +30,7 @@ $ npm run start
 ```
 ## Documentation
 ### Database
-### API
+### [API](https://docs.google.com/document/d/e/2PACX-1vQtvc8HKQoyUYFAH3y-NjzSe-_1axSy3S59sIgdcyFjwUHc9NosD-be9WlxA8LkdHZFhENDvBQTjnVI/pub)
 ## Resources
 
 **(Discord) Fürst#4041's [BLM 6.X Rotation Planner](https://docs.google.com/spreadsheets/d/1qbOY5WSfgzoCyHyzTJMJCl_7q6yfm3TErjs-8GyrAZ0/edit)**
