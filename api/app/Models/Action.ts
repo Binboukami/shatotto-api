@@ -67,6 +67,9 @@ export default class Action extends BaseModel {
   public dotDuration: number
 
   @column()
+  public duration: number
+
+  @column()
   public cooldown: number
 
 
