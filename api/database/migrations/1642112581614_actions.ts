@@ -24,7 +24,7 @@ export default class Actions extends BaseSchema {
       table.boolean('dot').defaultTo(false)
       table.integer('dot_potency').defaultTo(0)
       table.integer('dot_duration').defaultTo(0)
-      table.integer('duration').defaultTo(0)
+      table.integer('effect_duration').defaultTo(0)
       table.integer('cooldown').defaultTo(0)
 
       table.timestamp('created_at', { useTz: true })
