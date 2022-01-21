@@ -7,6 +7,8 @@ export default class Actions extends BaseSchema {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
 
+      table.string('key', 16).notNullable().unique()
+      table.string('name', 64).notNullable().unique()
       table.string('level', 4).defaultTo(1)
       table.integer('type_id').unsigned().notNullable().references('id').inTable('types')
       table.integer('element_id').unsigned().notNullable().references('id').inTable('elements')
