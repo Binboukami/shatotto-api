@@ -21,6 +21,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -40,6 +41,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -59,6 +61,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -78,6 +81,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 0,
         'cooldown': 0
       },
       {
@@ -97,6 +101,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -116,6 +121,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -135,6 +141,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -154,6 +161,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 0,
         'cooldown': 0
       },
       {
@@ -173,6 +181,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': true,
         'dotPotency': 35,
         'dotDuration': 21,
+        'duration': 40,
         'cooldown': 0
       },
       {
@@ -192,6 +201,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': true,
         'dotPotency': 15,
         'dotDuration': 18,
+        'duration': 40,
         'cooldown': 0
       },
       {
@@ -211,6 +221,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': true,
         'dotPotency': 35,
         'dotDuration': 30,
+        'duration': 40,
         'cooldown': 0
       },
       {
@@ -230,6 +241,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': true,
         'dotPotency': 20,
         'dotDuration': 18,
+        'duration': 40,
         'cooldown': 0
       },
       {
@@ -287,6 +299,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -325,6 +338,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -382,6 +396,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -401,6 +416,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -420,6 +436,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 15,
         'cooldown': 0
       },
       {
@@ -439,6 +456,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dot': false,
         'dotPotency': 0,
         'dotDuration': 0,
+        'duration': 30,
         'cooldown': 0
       },
     ])
