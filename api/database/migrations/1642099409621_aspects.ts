@@ -6,8 +6,8 @@ export default class Aspects extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('key').notNullable()
-      table.string('name').notNullable()
+      table.string('key', 8).notNullable()
+      table.string('name', 64).notNullable()
       table.integer('value')
       table.integer('buff_duration')
       table.float('buff_scale', 3, 2)
