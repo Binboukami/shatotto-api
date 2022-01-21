@@ -422,6 +422,25 @@ export default class CreateActionSeeder extends BaseSeeder {
         'dotDuration': 0,
         'cooldown': 0
       },
+      {
+        'key': 'Sleep',
+        'name': 'Sleep',
+        'level': '10',
+        'typeId': 2,
+        'elementId': 4,
+        'targetId': 1,
+        'aspectId': 1,
+        'cast': 2.5,
+        'recast': 2.5,
+        'potency': 0,
+        'mpCost': 800,
+        'aoe': false,
+        'aoeScale': 0,
+        'dot': false,
+        'dotPotency': 0,
+        'dotDuration': 0,
+        'cooldown': 0
+      },
     ])
   }
 }
