@@ -6,7 +6,7 @@ export default class Targets extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments('id')
-      table.string('key')
+      table.string('key', 64)
       table.integer('value')
     })
   }
