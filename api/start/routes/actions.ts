@@ -1,3 +1,6 @@
 import Route from '@ioc:Adonis/Core/Route'
 
-Route.resource('/actions', 'Actions/Main.ts').only(['index']);
+Route.group(() => {
+    Route.get('/', 'Actions/Main.ts.index')
+    Route.get('/:id', 'Actions/Main.ts.byId')
+}).prefix('/actions')
