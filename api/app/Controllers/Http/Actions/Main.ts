@@ -6,7 +6,7 @@ export default class ActionsController {
     const data = await Action.query()
     const serializedData = await data.map((data) => data.serialize({
       fields: {
-        pick: ['id', 'key', 'name', 'description'],
+        pick: ['id', 'key', 'name', 'url', 'description'],
       }
     }))
     
