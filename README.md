@@ -40,7 +40,7 @@ $ npm run start
 ## Todo
 
 ### Database
-- [ ] List all BLM actions  - abilities and spells -, skills (like 'Sprint') and Traits as of Endwalker 6.X
+- [X] List all BLM actions  - abilities and spells - as of Endwalker 6.X
 - [ ] List potions and relevant stats buff items
 
 ### API
