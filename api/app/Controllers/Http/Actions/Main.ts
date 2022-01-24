@@ -3,10 +3,16 @@ import { Action } from 'App/Models'
 
 export default class ActionsController {
   public async index({ }: HttpContextContract) {
-    const data = await Action.query().preload('type').preload('target').preload('element').preload('aspect')
+    const data = await Action.query()
     const serializedData = await data.map((data) => data.serialize({
-      fields: { omit: ['type_id', 'element_id', 'target_id'] }
+      fields: {
+        pick: ['id', 'key', 'name', 'description'],
+      }
     }))
+    
+    return serializedData;
+  }
+
 
     return serializedData;
   }
