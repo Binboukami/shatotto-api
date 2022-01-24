@@ -10,6 +10,7 @@ export default class Actions extends BaseSchema {
       table.string('key', 16).notNullable().unique()
       table.string('name', 64).notNullable().unique()
       table.string('level', 4).defaultTo(1)
+      table.string('url', 128).defaultTo('/action')
       table.string('description', 512).defaultTo('')
       table.integer('type_id').unsigned().notNullable().references('id').inTable('types')
       table.integer('element_id').unsigned().notNullable().references('id').inTable('elements')
