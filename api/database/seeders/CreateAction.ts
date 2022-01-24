@@ -33,7 +33,7 @@ export default class CreateActionSeeder extends BaseSeeder {
         'url': '/actions/2',
         'description': 'Deals fire damage with a potency of 100 to target and all enemies nearby it. Additional Effect: Grants Astral Fire III and removes Umbral Ice. Duration: 15s. Astral Fire Bonus: Grants Enhanced Flare. Effect is canceled if Astral Fire ends.',
         'typeId': 2,
-        'elementId': 1,
+        'elementId': 2,
         'targetId': 2,
         'aspectId': 4,
         'cast': 3,
