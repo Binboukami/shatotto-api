@@ -1,5 +1,5 @@
 import { DateTime } from 'luxon'
-import { BaseModel, BelongsTo, belongsTo, column } from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, beforeFetch, beforeFind, BelongsTo, belongsTo, column, ModelQueryBuilderContract } from '@ioc:Adonis/Lucid/Orm'
 import { Type, Target, Element, Aspect } from '.'
 
 export default class Action extends BaseModel {
@@ -78,11 +78,15 @@ export default class Action extends BaseModel {
   @column()
   public cooldown: number
 
-
-
   @column.dateTime({ autoCreate: true, serializeAs: null })
   public createdAt: DateTime
 
   @column.dateTime({ autoCreate: true, autoUpdate: true, serializeAs: null })
   public updatedAt: DateTime
+
+  @beforeFetch()
+  @beforeFind()
+  public static fetchRelations(query: ModelQueryBuilderContract<typeof Action>) {
+    query.preload('type').preload('target').preload('element').preload('aspect')
+  }
 }
