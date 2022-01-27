@@ -8,6 +8,28 @@ export default class ActionsController {
     const serializedData = await data.map((data) => data.serialize({
       fields: {
         pick: ['id', 'key', 'name', 'url', 'description'],
+      },
+      relations: {
+        'type': {
+          fields: {
+            pick: ['key']
+          }
+        },
+        'target': {
+          fields: {
+            pick: ['key']
+          }
+        },
+        'element': {
+          fields: {
+            pick: ['key']
+          }
+        },
+        'aspect': {
+          fields: {
+            pick: ['key', 'name']
+          }
+        }
       }
     }))
 
