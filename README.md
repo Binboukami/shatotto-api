@@ -28,6 +28,9 @@ $ npm run dev
 $ npm run build
 $ npm run start
 ```
+
+### Note:
+Also remember to update your local **```.env```** in the ```api``` folder
 ## Documentation
 ### Database
 ### [API](https://docs.google.com/document/d/e/2PACX-1vQtvc8HKQoyUYFAH3y-NjzSe-_1axSy3S59sIgdcyFjwUHc9NosD-be9WlxA8LkdHZFhENDvBQTjnVI/pub)
