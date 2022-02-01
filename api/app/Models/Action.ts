@@ -16,6 +16,9 @@ export default class Action extends BaseModel {
   public level: string
 
   @column()
+  public icon: string
+
+  @column()
   public url: string
 
   @column()
