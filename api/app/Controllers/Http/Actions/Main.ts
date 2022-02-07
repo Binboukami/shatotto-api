@@ -1,11 +1,32 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import { Action } from 'App/Models'
 
-export default class ActionsController {
-  public async index({ }: HttpContextContract) {
-    const data = await Action.query()
 
-    const serializedData = await data.map((data) => data.serialize({
+//? Function to convert query params properties from Camel Case to Snake Case
+function camelToSnake(key) {
+  var result = key.replace(/([A-Z])/g, " $1");
+  return result.split(' ').join('_').toLowerCase();
+}
+
+export default class ActionsController {
+  public async index({ request }: HttpContextContract) {
+
+    const query = Action.query()
+
+    const queryParams = Object.keys(request.qs());
+    const queryValue = Object.values(request.qs());
+
+    if (queryParams.length >= 5) {
+      // Handle query limit error
+    } else {
+      queryParams.forEach((param, p) => {
+        query.where(`${camelToSnake(param)}`, queryValue[p])
+      });
+    }
+
+    const data = await query.exec();
+
+    const serializedData = data.map((data) => data.serialize({
       fields: {
         pick: ['id', 'key', 'name', 'url', 'description'],
       },
