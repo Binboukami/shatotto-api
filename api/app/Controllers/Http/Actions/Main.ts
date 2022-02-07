@@ -1,4 +1,5 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import QueryHandleException from 'App/Exceptions/QueryHandleException';
 import { Action } from 'App/Models'
 
 
@@ -17,7 +18,8 @@ export default class ActionsController {
     const queryValue = Object.values(request.qs());
 
     if (queryParams.length >= 5) {
-      // Handle query limit error
+      throw new QueryHandleException(
+        `Exceeded query search parameter limit. Maximum query search limit: '${arguments.length}' parameter.`,  414, 'EXCEEDED_QUERY_PARAMS')
     } else {
       queryParams.forEach((param, p) => {
         query.where(`${camelToSnake(param)}`, queryValue[p])
