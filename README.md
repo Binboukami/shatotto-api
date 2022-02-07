@@ -17,9 +17,10 @@ $ cd ./api
 # install dependencies
 $ npm install
 
-# run migrations and seeding
+# run migrations and seeding in interactive mode
 $ node ace migration:run
-$ node ace db:seed
+$ node ace db:seed -i
+
 
 # serve with hot reload at localhost:3333
 $ npm run dev
@@ -29,8 +30,10 @@ $ npm run build
 $ npm run start
 ```
 
-### Note:
+### Notes:
+**Important**: While running seeders in interactive mode is important to note that the **CreateActions** should be the **LAST** one seeded to avoid model relationship errors during the process
 Also remember to update your local **```.env```** in the ```api``` folder
+
 ## Documentation
 ### Database
 ### [API](https://docs.google.com/document/d/e/2PACX-1vQtvc8HKQoyUYFAH3y-NjzSe-_1axSy3S59sIgdcyFjwUHc9NosD-be9WlxA8LkdHZFhENDvBQTjnVI/pub)
