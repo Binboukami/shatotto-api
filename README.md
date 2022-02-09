@@ -51,7 +51,7 @@ Also remember to update your local **```.env```** in the ```api``` folder
 - [ ] List potions and relevant stats buff items
 
 ### API
-- [ ] GET: routes - expose the database to developers
+- [ ] Deliver GET: routes for all action related resources
 - [ ] Add 'Constants' entity for math stuff
 - [ ] Implement a Rotation planner with Proc(?), CD and MP validations
 - [ ] Implement MP tick validation (based on server tick/ping calculations)
