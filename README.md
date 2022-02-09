@@ -31,7 +31,8 @@ $ npm run start
 ```
 
 ### Notes:
-**Important**: While running seeders in interactive mode is important to note that the **CreateActions** should be the **LAST** one seeded to avoid model relationship errors during the process
+**Important**: While running seeders in interactive mode is important to note that the **CreateActions** should be the **LAST** one seeded to avoid model relationship errors during the process.
+
 Also remember to update your local **```.env```** in the ```api``` folder
 
 ## Documentation
