@@ -1,9 +1,9 @@
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
-import Element from 'App/Models/Element'
+import { ActionElement } from 'App/Models'
 
 export default class CreateElementSeeder extends BaseSeeder {
   public async run() {
-    await Element.createMany([
+    await ActionElement.createMany([
       {
         "key": "Ice"
       },

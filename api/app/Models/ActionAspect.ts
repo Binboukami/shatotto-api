@@ -1,7 +1,7 @@
 import { BaseModel, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
 import { Action } from '.'
 
-export default class Aspect extends BaseModel {
+export default class ActionAspect extends BaseModel {
   @column({ isPrimary: true })
   public id: number
 

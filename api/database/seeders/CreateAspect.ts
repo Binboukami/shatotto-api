@@ -1,9 +1,9 @@
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
-import { Aspect } from 'App/Models'
+import { ActionAspect } from 'App/Models'
 
 export default class CreateAspectSeeder extends BaseSeeder {
   public async run() {
-    await Aspect.createMany([
+    await ActionAspect.createMany([
       {
         'key': 'N',
         'name': 'Neutral',

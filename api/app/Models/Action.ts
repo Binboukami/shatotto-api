@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, beforeFetch, beforeFind, BelongsTo, belongsTo, column, ModelQueryBuilderContract } from '@ioc:Adonis/Lucid/Orm'
-import { Type, Target, Element, Aspect } from '.'
+import { ActionType, ActionTarget, ActionElement, ActionAspect } from '.'
 
 export default class Action extends BaseModel {
   @column({ isPrimary: true })
@@ -25,28 +25,28 @@ export default class Action extends BaseModel {
   public description: string
 
   @column()
-  public typeId: number
+  public actionTypeId: number
 
-  @belongsTo(() => Type)
-  public type: BelongsTo<typeof Type>
-
-  @column()
-  public elementId: number
-
-  @belongsTo(() => Element)
-  public element: BelongsTo<typeof Element>
+  @belongsTo(() => ActionType)
+  public type: BelongsTo<typeof ActionType>
 
   @column()
-  public targetId: number
+  public actionElementId: number
 
-  @belongsTo(() => Target)
-  public target: BelongsTo<typeof Target>
+  @belongsTo(() => ActionElement)
+  public element: BelongsTo<typeof ActionElement>
 
   @column()
-  public aspectId: number
+  public actionTargetId: number
 
-  @belongsTo(() => Aspect)
-  public aspect: BelongsTo<typeof Aspect>
+  @belongsTo(() => ActionTarget)
+  public target: BelongsTo<typeof ActionTarget>
+
+  @column()
+  public actionAspectId: number
+
+  @belongsTo(() => ActionAspect)
+  public aspect: BelongsTo<typeof ActionAspect>
 
   @column()
   public cast: number

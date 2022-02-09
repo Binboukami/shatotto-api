@@ -1,9 +1,9 @@
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
-import Target from 'App/Models/Target'
+import { ActionTarget } from 'App/Models'
 
 export default class CreateTargetSeeder extends BaseSeeder {
   public async run() {
-    await Target.createMany([
+    await ActionTarget.createMany([
       {
         'key': 'Single',
         'value': 1,
