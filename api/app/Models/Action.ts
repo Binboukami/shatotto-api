@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon'
-import { BaseModel, beforeFetch, beforeFind, BelongsTo, belongsTo, column, ModelQueryBuilderContract } from '@ioc:Adonis/Lucid/Orm'
-import { ActionType, ActionTarget, ActionElement, ActionAspect } from '.'
+import { BaseModel, beforeFetch, beforeFind, BelongsTo, belongsTo, hasMany, HasMany, column, ModelQueryBuilderContract } from '@ioc:Adonis/Lucid/Orm'
+import { ActionType, ActionTarget, ActionElement, ActionAspect, RotationAction } from '.'
 
 export default class Action extends BaseModel {
   @column({ isPrimary: true })
@@ -80,6 +80,9 @@ export default class Action extends BaseModel {
 
   @column()
   public cooldown: number
+
+  @hasMany(() => RotationAction)
+  public rotationActions: HasMany<typeof RotationAction>
 
   @column.dateTime({ autoCreate: true, serializeAs: null })
   public createdAt: DateTime
