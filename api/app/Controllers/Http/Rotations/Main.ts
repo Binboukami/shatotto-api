@@ -85,7 +85,11 @@ export default class RotationsController {
 
   public async store({ request }: HttpContextContract) {
     const data = request.only(['key', 'description', 'rotationTypeId'])
-    const rotation = await Rotation.create(data)
+    const rotation = await Rotation.create(data);
+
+    rotation.merge({ 'url': `/rotations/${rotation.id}` })
+
+    await rotation.save();
 
     return rotation;
   }
