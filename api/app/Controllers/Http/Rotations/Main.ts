@@ -83,6 +83,64 @@ export default class RotationsController {
     return serializedData;
   }
 
+  public async byId({ params }: HttpContextContract) {
+    const data = await Rotation.findByOrFail('id', params.id)
+
+    const serializedData = data.serialize({
+      fields: {
+        pick: ['id', 'key', 'name', 'level', 'url', 'dps', 'description']
+      },
+      relations: {
+        'type': {
+          fields: {
+            pick: ['key']
+          }
+        },
+        'rotationActions': {
+          fields: {
+            pick: ['action_id', 'gauge_timer', 'gauge_heart_stack', 'gauge_polyglot_stack', 'gauge_paradox_stack', 'current_mp']
+          },
+          relations: {
+            'currentAspect': {
+              fields: {
+                pick: ['key', 'name']
+              }
+            },
+            'action': {
+              fields: {
+                pick: ['key', 'name']
+              },
+              relations: {
+                'type': {
+                  fields: {
+                    pick: ['key']
+                  }
+                },
+                'target': {
+                  fields: {
+                    pick: ['key']
+                  }
+                },
+                'element': {
+                  fields: {
+                    pick: ['key']
+                  }
+                },
+                'aspect': {
+                  fields: {
+                    pick: ['key', 'name']
+                  }
+                }
+              }
+            }
+          },
+        }
+      }
+    })
+
+    return serializedData;
+  }
+
   public async store({ request }: HttpContextContract) {
     const data = request.only(['key', 'description', 'rotationTypeId'])
     const rotation = await Rotation.create(data);
