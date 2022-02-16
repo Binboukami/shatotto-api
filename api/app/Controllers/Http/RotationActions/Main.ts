@@ -27,5 +27,12 @@ export default class RotationActionsController {
     return rotationAction;
   }
 
-  public async destroy({ }: HttpContextContract) { }
+  public async destroy({ params }: HttpContextContract) {
+    const rotationActions = await RotationAction.query().where('rotationId', params.id)
+    const rotationAction = rotationActions[params.indexOf]
+
+    rotationAction.delete()
+
+    return rotationActions
+  }
 }
