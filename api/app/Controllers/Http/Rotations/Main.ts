@@ -94,8 +94,8 @@ export default class RotationsController {
     return rotation;
   }
 
-  public async update({ request }: HttpContextContract) {
-    const rotation = await Rotation.findOrFail(request.qs().id)
+  public async update({ request, params }: HttpContextContract) {
+    const rotation = await Rotation.findOrFail(params.id)
     const rotationData = request.only(['key', 'description', 'rotationTypeId'])
 
     rotation.merge(rotationData)
