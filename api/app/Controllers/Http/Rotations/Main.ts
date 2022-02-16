@@ -1,12 +1,9 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 import QueryHandleException from 'App/Exceptions/QueryHandleException';
 import { Rotation } from 'App/Models';
+import Utils from 'App/Controllers/Utils'
 
-//? Function to convert query params properties from Camel Case to Snake Case
-function camelToSnake(key) {
-  var result = key.replace(/([A-Z])/g, " $1");
-  return result.split(' ').join('_').toLowerCase();
-}
+const utils = new Utils();
 
 export default class RotationsController {
 
@@ -22,7 +19,7 @@ export default class RotationsController {
         `Exceeded query search parameter limit. Maximum query search limit: '${arguments.length}' parameter.`, 414, 'EXCEEDED_QUERY_PARAMS')
     } else {
       queryParams.forEach((param, p) => {
-        query.where(`${camelToSnake(param)}`, queryValue[p])
+        query.where(`${utils.camelToSnake(param)}`, queryValue[p])
       });
     }
 
