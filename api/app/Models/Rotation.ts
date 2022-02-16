@@ -36,7 +36,9 @@ export default class Rotation extends BaseModel {
   @column()
   public private: boolean
 
-  @hasMany(() => RotationAction)
+  @hasMany(() => RotationAction, {
+    "serializeAs": "Actions"
+  })
   public rotationActions: HasMany<typeof RotationAction>
 
   @column.dateTime({ autoCreate: true })
