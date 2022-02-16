@@ -11,6 +11,8 @@ export default class RotationActionsController {
       RotationAction.create({ ...obj, 'rotationId': params.id })
     });
 
+    await rotation.refresh();
+
     return rotation;
   }
 
