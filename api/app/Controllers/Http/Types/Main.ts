@@ -1,9 +1,9 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import { Type } from 'App/Models'
+import { ActionType } from 'App/Models'
 
 export default class TypesController {
   public async index({ }: HttpContextContract) {
-    const data = await Type.query()
+    const data = await ActionType.query()
     return data;
   }
 }

@@ -1,6 +1,7 @@
 import Route from '@ioc:Adonis/Core/Route'
 import './actions'
 import './types'
+import './rotations'
 
 Route.get('/', async () => {
   return {
@@ -10,6 +11,6 @@ Route.get('/', async () => {
     "environment": "development",
     "gitAuthor": "https://github.com/Binboukami/shatotto-api",
     "ffInfo": "Amalia Llymlaen on Behemoth (Primal)",
-    "endpoints": ["/actions", "/types"]
+    "endpoints": ["/actions", "/rotations", "/types"]
   }
 })

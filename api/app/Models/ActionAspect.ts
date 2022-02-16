@@ -1,5 +1,5 @@
 import { BaseModel, column, hasMany, HasMany } from '@ioc:Adonis/Lucid/Orm'
-import { Action } from '.'
+import { Action, RotationAction } from '.'
 
 export default class ActionAspect extends BaseModel {
   @column({ isPrimary: true })
@@ -31,4 +31,7 @@ export default class ActionAspect extends BaseModel {
 
   @hasMany(() => Action)
   public actions: HasMany<typeof Action>
+
+  @hasMany(() => RotationAction)
+  public rotationActions: HasMany<typeof RotationAction>
 }
