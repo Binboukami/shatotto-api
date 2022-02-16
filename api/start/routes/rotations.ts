@@ -7,6 +7,7 @@ Route.group(() => {
 
     //Rotation Actions
     Route.post('/:id/actions', 'RotationActions/Main.store')
-    Route.put('/:id/actions', 'RotationActions/Main.update')
+    Route.put('/:id/actions/:indexOf', 'RotationActions/Main.update')
+    Route.delete('/:id/actions/:indexOf', 'RotationActions/Main.destroy')
 
 }).prefix('/rotations')
