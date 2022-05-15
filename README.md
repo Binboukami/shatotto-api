@@ -2,6 +2,9 @@
 
 A **BLM Resources API** for the _critically acclaimed MMORPG Final Fantasy XIV, which has a free trial that include the entirety of "A Realm Reborn" AND the award-winning "Heavensward" expansion up to level 60 with no restrictions on playtime._
 
+## Archived
+After considering the maintenance resources and and availability of more robust tools that serve the same purpose, this repository has been archived.
+
 ## Build Setup
 
 ```bash
